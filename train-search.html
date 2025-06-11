@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/512/7995/7995412.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p>Easy-Rail</p>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="navbar" id="navbar">
+            <ul>
+                <li>
+                    <div class="box"><a href="index.html">Home</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="availability.html">Availability</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="train-search.html">Train Search</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="pnr-status.html">PNR Status</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="live-status.html">Live Status</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="at-station.html">At Station</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="account">
+            <img src="https://i.ibb.co/j4hffQ3/user.png" alt="User">
+        </div>
+    </header>
+
+    <h1 class="heading">Train Timetable</h1>
+    <div class="search-container">
+        
+        
+        <label for="train-number">Enter Train Name or Number</label>
+        <input type="text" id="train-number" placeholder="Ex: 12312 || NETAJI EXPRESS" oninput="getTrainNumber()" autocomplete="off"/>
+        <button onclick="fetchTrainDetails()">Search</button>
+        <div class="train-suggestions" id="train-suggestions"></div>
+    </div>
+
+
+    </div>
+    <div id="train-details">
+        <table id="train-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody id="train-table-body"></tbody>
+        </table>
+    </div>
+
+
+    <div class="schedule-container" id="schedule-container">
+        <h1>Train Schedule</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Station Name</th>
+                    <th>Station Code</th>
+                    <th>Arrival Time</th>
+                    <th>Departure Time</th>
+                    <th>Distance (km)</th>
+                </tr>
+            </thead>
+            <tbody id="train-schedule"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

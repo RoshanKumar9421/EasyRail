@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Train Status</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/512/7995/7995412.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p>Easy-Rail</p>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="navbar" id="navbar">
+            <ul>
+                <li>
+                    <div class="box"><a href="index.html">Home</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="availability.html">Availability</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="train-search.html">Train Search</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="pnr-status.html">PNR Status</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="live-status.html">Live Status</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="at-station.html">At Station</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="account">
+            <img src="https://i.ibb.co/j4hffQ3/user.png" alt="User">
+        </div>
+    </header>
+
+    <h1>Train Running Status</h1>
+    <form id="trainForm">
+        <label for="trainNumber">Train Number:</label>
+        <input type="text" id="trainNumber" name="trainNumber" placeholder="Ex: 12345" required autocomplete="off"/>
+        <label for="date">Starting Date:</label>
+        <input type="date" id="dates" name="date"/>
+        <button type="button" class="search-button" onclick="getStatus()" >Check Status</button>
+    </form>
+    <div class="loader" id="train-loader"></div>
+    <pre id="output1">
+
+    </pre>
+    <div id="trainStatusContainer">
+        <!-- The table will be generated here -->
+    </div>
+
+
+    <!--<div class="station">
+        <div class="line">
+            <div class="circle"></div>
+        </div>
+        <div class="details">
+            <h2>KALKA</h2>
+            <div class="timings">
+                <p>Est. Arrival: 12:00 PM</p>
+                <p>Est. Departure :01:00 PM </p>
+            </div>
+            <div class="delay">
+                <p>Delay: 1hr 32min</p>
+            </div>
+        </div>
+
+
+    </div>-->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

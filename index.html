@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy-Rail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/512/7995/7995412.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p>Easy-Rail</p>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="navbar" id="navbar">
+            <ul>
+                <li>
+                    <div class="box"><a href="index.html">Home</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="availability.html">Availability</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="train-search.html">Train Search</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="pnr-status.html">PNR Status</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="live-status.html">Live Status</a></div>
+                </li>
+                <li>
+                    <div class="box"><a href="at-station.html">At Station</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="account">
+            <img src="https://i.ibb.co/j4hffQ3/user.png" alt="User">
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="main-box">
+            <h1>Search Trains</h1>
+            <div class="input-bag">
+                <div class="input-contain">
+                    <div class="input-box">
+                        <label for="From">From</label>
+                        <input type="text" id="from" placeholder="&#8680 New Delhi" oninput="searchStationFrom()" autocomplete="off">
+                        <div class="suggestions-from" id="suggestions-from"></div>
+                    </div>
+                    <img src="https://i.ibb.co/9gQFzhG/change.png">
+                    <div class="input-box">
+                        <label for="To">To</label>
+                        <input type="text" id="to" placeholder="&#8680 Mumbai" oninput="searchStationTo()" autocomplete="off">
+                        <div class="suggestions-to" id="suggestions-to"></div>
+                    </div>
+                </div>
+                <div class="input-contain">
+                    <div class="input-box">
+                        <label for="class">Class</label>
+                        <select name="class" id="class" disabled>
+                            <option value="All Classes">All Classes</option>
+                            <option value="2S">2S</option>
+                            <option value="Sleeper">Sleeper</option>
+                            <option value="3rd AC">3rd AC</option>
+                            <option value="2nd AC">2nd AC</option>
+                            <option value="1st AC">1st AC</option>
+
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="date" >Journey Date</label>
+                        <input type="date" id="date">
+                    </div>
+
+                </div>
+                <div class="input-contain">
+                    <div class="input-box">
+                        <label for="Quota">Quota</label>
+                        <select name="quota" id="quota" disabled>
+                            <option value="GENERAL">GENERAL</option>
+                            <option value="TATKAL">TATKAL</option>
+                            <option value="PREMIUM-TATKAL">PREMIUM TATKAL</option>
+                            <option value="LADIES">LADIES</option>
+                            <option value="SENIOR CITIZEN">SENIOR CITIZEN</option>
+                        </select>
+                    </div>
+                    <div class="input-box"></div>
+                </div>
+            </div>
+            <button id="main-search">Search</button>
+        </div>
+        <div class="pic"><img src="https://i.ibb.co/Ht7y5Sn/Screenshot-2024-11-15-220318.png"></div>
+    </div>
+    <div id="train-results"></div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
