@@ -41,9 +41,6 @@ Effortlessly plan your journey, track trains in real-time, and stay informed wit
 
 ---
 
-## 📂 GitHub Repository  
-
-🔗 [Easy Rail on GitHub](https://github.com/RAJIV81205/Easy-Rail)  
 
 ---
 
